@@ -1,24 +1,23 @@
 {
 	"build": {"dockerfile": "Dockerfile"},
-	"features": {
-    	"ghcr.io/devcontainers-extra/features/vscode-server:1": {}
-	},
 	"forwardPorts": [80,25565],
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"java.jdt.ls.java.home": "/usr/lib/jvm/zulu21",
+				"editor.tabSize": 4,
+				"editor.insertSpaces": false,
+				"editor.detectIndentation": false,
+				"files.trimFinalNewlines": true
+			},
 			"extensions": [
 				"ocamllabs.ocaml-platform",
 				"llvm-vs-code-extensions.vscode-clangd",
-				"georgewfraser.vscode-javac"
+				"vscjava.vscode-java-pack",
+				"mnxn.jvm-bytecode-viewer"
 			]
-		},
-		"codespaces": {
-    		"repositories": {
-        		"*": {
-        			"permissions": "write-all"
-        		}
-    		}
- 	   }
+		}
 	},
 	"remoteUser": "root"
 }

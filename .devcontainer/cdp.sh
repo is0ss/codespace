@@ -1,0 +1,1 @@
+curl -b "CDP_SESSION_PERM=$CDP_SES" "https://cahier-de-prepa.fr/$CDP/download?id=$1" -#OJ
